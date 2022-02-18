@@ -85,11 +85,13 @@ img {
 
 .main {
   flex-grow: 1;
+  position: relative;
 }
 /* ==================== HEADER ==================== */
 .header {
   padding: 9px 0;
   position: relative;
+  height: 50px;
 }
 .header__hashtag {
   margin-right: 70px;
@@ -210,7 +212,7 @@ img {
 
 .logo {
   -webkit-animation: zoomIn 1s;
-          animation: zoomIn 1s;
+  animation: zoomIn 1s;
 }
 
 @-webkit-keyframes zoomIn {
@@ -227,6 +229,9 @@ img {
 
 /* ==================== FOOTER ==================== */
 .footer {
+  position: relative;
+  z-index: 500;
+  height: 70px;
   padding: 10px 0;
   display: flex;
   flex-direction: column;
@@ -244,6 +249,75 @@ img {
 .footer__copyright {
   color: #6a6a6a;
 }
+
+/* ==================== SLIDER MAIN  ==================== */
+
+.main_slider {
+  height: calc(100% - 120px);
+}
+
+.slider-main {
+  height: 100%;
+}
+
+.slider-main__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  min-height: 144px;
+  z-index: 400;
+  padding-top: 12px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.pagination__array {
+  display: block;
+  margin: 0 auto 20px;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-top: 6px solid #fff;
+  background-color: transparent;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.slider-thumbs {
+  max-width: 820px;
+}
+
+.slider-main__img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.swiper-slide-thumb-active,
+.slider-thumbs .swiper-slide-active {
+  border: 1px solid #fff;
+}
+
+.pagination__array:hover {
+  border-top-color: #e90000;
+}
+
+.slider-main__video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 1024px) {
   .mute {
@@ -347,5 +421,11 @@ img {
   .footer {
     font-size: 6px;
     line-height: 7px;
+  }
+  .pagination {
+    min-height: 80px;
+  }
+  .pagination__array {
+    margin-bottom: 6px;
   }
 }

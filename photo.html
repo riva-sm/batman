@@ -5,13 +5,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Фотогалерея BATMAN — 2022 | Интенсив Methed</title>
+
   <link rel="preload" href="fonts/roboto-v29-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/roboto-v29-latin_cyrillic-500.woff2" as="font" type="font/woff2" crossorigin>
   <!-- ==================== NORMALIZE CSS ==================== -->
   <link rel="stylesheet" href="css/normalize.css">
+  <!-- ==================== SWIPER CSS ==================== -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <!-- ==================== SWIPER JS ==================== -->
+  <script defer src="js/swiper-bundle.min.js"></script>
   <!-- ==================== STYLE CSS ==================== -->
   <link rel="stylesheet" href="css/style.css">
-  <title>Фотогалерея BATMAN — 2022 | Интенсив Methed</title>
+  <!-- ==================== MAIN SCRIPT  ==================== -->
+  <script defer src="js/script.js"></script>
+
+
 </head>
 
 <body>
@@ -65,9 +74,65 @@
       <label class="mute__label" for="mute">mute</label>
     </div>
   </header>
-  <!-- ==================== MAIN ==================== -->
-  <main class="main main_index">
-    <img class="logo" width="329" height="235" src="img/logo.png" alt="Логотип к фильму Бэтмен">
+  <!-- ==================== MAIN PHOTO GALLERY ==================== -->
+  <main class="main main_slider">
+    <div class="slider-main swiper">
+      <ul class="slder-main__list swiper-wrapper">
+        <li class="slider-main__item swiper-slide">
+          <img class="slider-main__img" src="photo/photo01.jpg" alt="Брюс Уэйн и комиссар Гордон">
+        </li>
+        <li class="slider-main__item swiper-slide">
+          <img class="slider-main__img" src="photo/photo02.jpg" alt="Бэтмен и Женщина-Кошка на фоне заката">
+        </li>
+        <li class="slider-main__item swiper-slide">
+          <img class="slider-main__img" src="photo/photo03.jpg" alt="Брюс Уэйн">
+        </li>
+        <li class="slider-main__item swiper-slide">
+          <img class="slider-main__img" src="photo/photo04.jpg" alt="Бэтмен стоит возле Бэтмобиля">
+        </li>
+        <li class="slider-main__item swiper-slide">
+          <img class="slider-main__img" src="photo/photo05.jpg" alt="Бэтмен смотрит на город">
+        </li>
+        <li class="slider-main__item swiper-slide">
+          <img class="slider-main__img" src="photo/photo06.jpg" alt="Бэтмен и Женщина-Кошка разговор">
+        </li>
+        <li class="slider-main__item swiper-slide">
+          <img class="slider-main__img" src="photo/photo07.jpg" alt="Брюс Уэйн выходит из машины">
+        </li>
+        <li class="slider-main__item swiper-slide">
+          <img class="slider-main__img" src="photo/photo08.jpg" alt="Бэтмен и Женщина-Кошка рядом с мотоциклом">
+        </li>
+      </ul>
+    </div>
+    <div class="pagination">
+      <button class="pagination__array"></button>
+      <div class="slider-thumbs swiper">
+        <ul class="slider-thumbs__list swiper-wrapper">
+          <li class="slider-thumbs__item swiper-slide"><img class="slider-thumbs__img" src="photo/photo01-thumbs.jpg"
+              alt="миниатюра Брюс Уэйн и комиссар Гордон" width="260" height="100"></li>
+          <li class="slider-thumbs__item swiper-slide"><img class="slider-thumbs__img" src="photo/photo02-thumbs.jpg"
+              alt="миниатюра Бэтмен и Женщина-Кошка на фоне заката" width="260" height="100"></li>
+          <li class="slider-thumbs__item swiper-slide"><img class="slider-thumbs__img" src="photo/photo03-thumbs.jpg"
+              alt="миниатюра Брюс Уэйн" width="260" height="100">
+          </li>
+          <li class="slider-thumbs__item swiper-slide"><img class="slider-thumbs__img" src="photo/photo04-thumbs.jpg"
+              alt="Бэтмен стоит возле Бэтмобиля" width="260" height="100">
+          </li>
+          <li class="slider-thumbs__item swiper-slide"><img class="slider-thumbs__img" src="photo/photo05-thumbs.jpg"
+              alt="Бэтмен смотрит на город" width="260" height="100">
+          </li>
+          <li class="slider-thumbs__item swiper-slide"><img class="slider-thumbs__img" src="photo/photo06-thumbs.jpg"
+              alt="Бэтмен и Женщина-Кошка разговор" width="260" height="100">
+          </li>
+          <li class="slider-thumbs__item swiper-slide"><img class="slider-thumbs__img" src="photo/photo07-thumbs.jpg"
+              alt="Брюс Уэйн выходит из машины" width="260" height="100">
+          </li>
+          <li class="slider-thumbs__item swiper-slide"><img class="slider-thumbs__img" src="photo/photo08-thumbs.jpg"
+              alt="миниатюра Бэтмен и Женщина-Кошка рядом с мотоциклом" width="260" height="100">
+          </li>
+        </ul>
+      </div>
+    </div>
   </main>
   <!-- ==================== FOOTER ==================== -->
   <footer class="footer">
@@ -79,6 +144,7 @@
     </ul>
     <p class="footer__copyright">© 2022 WBEI TM & © DC</p>
   </footer>
+
 </body>
 
 </html>
